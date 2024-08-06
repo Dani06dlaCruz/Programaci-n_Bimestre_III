@@ -1,0 +1,213 @@
+/* Importar las fuentes */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One');
+
+/* General setup */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    background-color: #a9a9a9;
+}
+
+body {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Sonsie One', cursive;
+    font-size: 4rem;
+    text-align: center;
+    color: antiquewhite;
+    text-shadow: 2px 2px 10px burlywood;
+    animation: fadeIn 2s ease-in-out; /* Animación original solo para este título */
+}
+
+h2, h3 {
+    font-family: 'Sonsie One', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #2a2a2a;
+    animation: blink 3s infinite; /* Animación de parpadeo para los demás títulos */
+}
+
+p, input, li {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #2a2a2a;
+}
+
+p, li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+/* Header layout */
+nav, article, aside, footer {
+    background-color: aliceblue;
+    padding: 1%;
+}
+
+nav {
+    height: 50px;
+    background-color: #80c8ff;
+    display: flex;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 1s ease-in-out; /* Animación de aparición desde la izquierda para el menú de navegación */
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out; /* Animación de cambio de color al pasar el cursor sobre los enlaces de navegación */
+}
+
+nav a:hover {
+    color: #333;
+}
+
+nav form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0.2rem;
+}
+
+input {
+    font-size: 1.6rem;
+    height: 32px;
+}
+
+input[type='search'] {
+    flex: 3;
+}
+
+input[type='submit'] {
+    flex: 1;
+    margin-left: 1rem;
+    background: #333;
+    border: 0;
+    color: azure;
+    animation: scaleUp 2s ease-in-out; /* Animación original solo para este botón */
+}
+
+/* Main layout */
+main {
+    display: flex;
+}
+
+article {
+    flex: 4;
+}
+
+aside {
+    flex: 1;
+    margin-left: 10px;
+    background-color: #808fff;
+    animation: fadeIn 2s ease-in-out; /* Animación de desvanecimiento para el aside */
+}
+
+aside li {
+    padding-bottom: 10px;
+    transition: color 0.3s ease-in-out; /* Animación de resaltado al pasar el cursor sobre los elementos de la lista del aside */
+}
+
+aside li:hover {
+    color: #333;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1.2); opacity: 1; }
+}
+
+/* Animación de escala para las imágenes */
+@keyframes scaleImage {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Aplicar la animación a las imágenes */
+img {
+    animation: scaleImage 5s ease-in-out; /* Duración de la animación ajustada a 5 segundos */
+}
+
+#myForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 5px;
+ }
+
+ h3 {
+    font-size: 25px;
+    margin-bottom: 1px;
+ }
+
+ label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+ }
+ input,
+ textarea {
+    width: 95%;
+    padding: 1px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
+
+ button{
+    background-color: antiquewhite;
+    color: burlywood;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+ button:hover {
+    background-color: aquamarine;
+ }
